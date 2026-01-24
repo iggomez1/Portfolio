@@ -10,14 +10,14 @@
 /* ---------------- VARIABLES GLOBALES ---------------- */
 /* DARK por defecto (estilo IDE) */
 :root {
-  --bg-main: #1e1e2e;
-  --bg-secondary: #2e2e3e;
+  --bg-main: #1e1e1e;       /* Fondo principal oscuro */
+  --bg-secondary: #2a2a2a;  /* Fondo secundario, ligeramente más claro */
 
-  --text-main: #d4d4d4;
-  --text-muted: #6c6c80;
+  --text-main: #d4d4d4;     /* Texto principal */
+  --text-muted: #7a7a7a;    /* Texto secundario / menos importante */
 
-  --primary: #38bdf8;
-  --accent: #c792ea;
+  --primary: #38bdf8;       /* Color principal para enlaces/acento */
+  --accent: #c792ea;        /* Color secundario para acentos */
 }
 
 /* ---------------- ESTILOS BASE ---------------- */
@@ -41,10 +41,10 @@ a {
 /* ---------------- DETECCIÓN AUTOMÁTICA DEL SISTEMA ---------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-main: #1e1e2e;
-    --bg-secondary: #2e2e3e;
+    --bg-main: #1e1e1e;
+    --bg-secondary: #2a2a2a;
     --text-main: #d4d4d4;
-    --text-muted: #6c6c80;
+    --text-muted: #7a7a7a;
     --primary: #38bdf8;
     --accent: #c792ea;
   }
@@ -52,10 +52,10 @@ a {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-main: #f5f5f5;
-    --bg-secondary: #e0e0e0;
-    --text-main: #1e1e2e;
-    --text-muted: #555555;
+    --bg-main: #f5f5f5;      /* Gris claro como fondo principal */
+    --bg-secondary: #e0e0e0; /* Gris ligeramente más oscuro para tarjetas/sections */
+    --text-main: #1e1e1e;    /* Texto principal oscuro */
+    --text-muted: #555555;   /* Texto secundario */
     --primary: #2563eb;
     --accent: #b45309;
   }
