@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './shared/navbar/navbar';
+import { ThemeService } from './core/theme';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,11 @@ import { Navbar } from './shared/navbar/navbar';
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
 })
-export class App {}
+export class App implements OnInit {
+
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit(): void {
+    this.themeService.initTheme();
+  }
+}

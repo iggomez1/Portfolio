@@ -1,32 +1,96 @@
+/* ==========================================
+   Fuente global para la navbar
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ==========================================
+   NAVBAR PRINCIPAL
+========================================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
-  background-color: #020617;
+
+  background-color: var(--bg-secondary); /* Color global */
   border-bottom: 1px solid #1e293b;
+
+  font-family: 'JetBrains Mono', monospace;
 }
 
+/* ==========================================
+   LOGO
+========================================== */
 .logo a {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #e5e7eb;
+  color: var(--text-main); /* Color global */
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
+/* ==========================================
+   LINKS
+========================================== */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  color: #cbd5f5;
+  color: var(--text-muted); /* Color global */
   font-weight: 500;
   text-decoration: none;
+  position: relative;       /* Necesario para ::after */
   transition: color 0.2s ease;
 }
 
+/* ---------- Hover ---------- */
 .nav-links a:hover {
-  color: #38bdf8;
+  color: var(--primary); /* Color global */
+}
+
+/* ---------- Link activo ---------- */
+.nav-links a.active {
+  color: var(--primary); /* Color global */
+}
+
+/* ---------- Subrayado animado (hover + active) ---------- */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary); /* Color global */
+  
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease; /* Animación suave */
+}
+
+/* Hover y activo muestran subrayado */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* ==========================================
+   RESPONSIVE (opcional)
+========================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

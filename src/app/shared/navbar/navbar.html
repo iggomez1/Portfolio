@@ -1,12 +1,32 @@
 <nav class="navbar">
+  <!-- LOGO -->
   <div class="logo">
-    <a routerLink="">TuNombre</a>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Iñigo Gómez Lozano
+    </a>
   </div>
 
+  <!-- NAV LINKS -->
   <ul class="nav-links">
-    <li><a routerLink="">Home</a></li>
-    <li><a routerLink="projects">Projects</a></li>
-    <li><a routerLink="research">Research</a></li>
-    <li><a routerLink="contact">Contact</a></li>
+    <li>
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="projects" routerLinkActive="active">
+        Projects
+      </a>
+    </li>
+    <li>
+      <a routerLink="research" routerLinkActive="active">
+        Research
+      </a>
+    </li>
+    <li>
+      <a routerLink="contact" routerLinkActive="active">
+        Contact
+      </a>
+    </li>
   </ul>
 </nav>
