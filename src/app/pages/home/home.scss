@@ -1,4 +1,4 @@
-/* ===============================
+/* =============================== 
    CONTENEDOR PRINCIPAL
    Foto + columna de contenido
 ================================ */
@@ -10,15 +10,22 @@
   padding-left: 2rem;
 }
 
-
 /* ===============================
-   COLUMNA IZQUIERDA – FOTO
+   COLUMNA IZQUIERDA – FOTO + CV
 ================================ */
-.home-photo-frame {
-  flex-shrink: 0;               /* la foto no se encoge */
+.home-photo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra la foto y el CV */
+  gap: 1rem;
+  flex-shrink: 0;
   width: 20vw;
   max-width: 250px;
   min-width: 160px;
+}
+
+.home-photo-frame {
+  width: 100%;
   border: 5px solid var(--bg-secondary);
   box-sizing: border-box;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
@@ -37,6 +44,91 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
+.cv-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary);
+  text-align: center;
+}
+
+
+/* PROFESSIONAL SKILLS (cuadrícula adaptativa)*/
+   
+.professional-skills {
+  text-align: center;          /* centra el título */
+  width: 100%;                 /* ocupa todo el ancho del contenedor de la columna */
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* centra la grid horizontalmente */
+}
+
+.professional-skills-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.professional-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;       /* centra cada celda dentro de su columna */
+  align-items: center;
+  width: 100%;                 /* opcional: para ocupar todo el ancho del contenedor */
+  max-width: 250px;            /* mismo ancho que la foto */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;        /* hace la celda cuadrada */
+  gap: 0.4rem;            /* espacio entre logo y nombre */
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+
+.skill-logo {
+  max-width: 60%;   /* que no ocupe toda la celda */
+  max-height: 60%;  /* mantiene proporción */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;   /* centra horizontalmente */
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+
+/* ===============================
+   SOFT SKILLS
+   (reutiliza home-section)
+================================ */
+.soft-skills {
+  width: 100%;
+  max-width: 250px;       /* igual que la grid de professional skills */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.soft-skills .home-section-title {
+  margin-bottom: 0.8rem;
+}
+
+.soft-skills .home-section-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 
 /* ===============================
    COLUMNA DERECHA – CONTENIDO
@@ -49,7 +141,6 @@
   padding-right: 2rem;
   box-sizing: border-box;
 }
-
 
 /* ===============================
    HERO (nombre + rol + tagline)
@@ -82,7 +173,6 @@
   text-align: justify;
 }
 
-
 /* ===============================
    SECCIONES REUTILIZABLES
    (About Me, Experience, Education, Languages, etc.)
@@ -108,7 +198,7 @@
 
 /* Tipo de texto normal */
 .home-section-text {
-  position: relative;           /* necesario para posicionar logo dentro del párrafo */
+  position: relative; /* necesario para posicionar logo dentro del párrafo */
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-muted);
@@ -147,11 +237,10 @@
   width: auto;
   pointer-events: none;
 }
- 
+
 /* ===============================
    LANGUAGE SKILLS - COLUMNAS
 ================================ */
-
 .home-section-languages {
   display: flex;
   justify-content: space-between; /* separa las tres columnas */
@@ -183,9 +272,7 @@
   background-color: #e0e0e0;
   border-radius: 4px;
   overflow: hidden;
-  display: block;
-  margin-bottom: 3rem; /* ajusta el espacio a tu gusto */
-  display: block;       /* para que respete el margen correctamente */
+  margin-bottom: 1rem;      /* espacio debajo de cada barra/estrella */
 }
 
 /* Porción llena de la barra */
@@ -208,8 +295,8 @@
 .language-star {
   font-size: 1rem;       /* tamaño pequeño */
   color: var(--primary);
+  margin-bottom: 1rem;   /* espacio debajo de la estrella */
 }
-
 
 /* ===============================
    TEMA CLARO
