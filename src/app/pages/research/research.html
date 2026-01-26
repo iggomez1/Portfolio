@@ -1,1 +1,189 @@
-<p>research works!</p>
+<div class="research-tabs">
+  <div 
+    class="research-tab" 
+    [class.active]="activeTab === 'publications'" 
+    (click)="setActiveTab('publications')">
+    Publications
+  </div>
+  <div 
+    class="research-tab" 
+    [class.active]="activeTab === 'events'" 
+    (click)="setActiveTab('events')">
+    Events
+  </div>
+</div>
+
+<!-- Contenido -->
+<div class="research-content">
+  <!-- Publications -->
+    <div *ngIf="activeTab === 'publications'" class="research-section">
+
+    <!-- HERO -->
+    <div class="research-hero">
+        <h1>Publications</h1>
+        <h2>My recent research papers and scientific contributions</h2>
+    </div>
+
+    <!-- PAPER TITLE -->
+    <h3 class="research-paper-title">
+        Enhancing daVinci Xi® Instrument Reprocessing Training through Virtual Reality: A Case Study on a Large Needle Driver
+    </h3>
+
+    <!-- DIVIDER -->
+    <div class="section-divider"></div>
+
+
+    <!-- TEXT -->
+    <div class="research-text">
+        <p>
+        The paper regarding the daVinci Xi® Instrument Reprocessing System has already been written under that title, and is currently on the last stage of approval before being published. As soon as the paper is published, it will be featured in this section.
+        </p>
+    </div>
+
+    </div>
+
+    <!-- Events -->
+<div *ngIf="activeTab === 'events'" class="research-section">
+  <div class="research-hero">
+    <h1>Events</h1>
+    <h2>Conferences, workshops, and other research activities</h2>
+  </div>
+
+  <!-- EVENT TITLE -->
+    <h3 class="research-paper-title">
+        CASEIB 2025: XLIII Annual Congress of the Spanish Society of Biomedical Engineering 2025 (November 20th, 2025)
+        <a
+        href="https://caseib.es/2025/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="external-link"
+        aria-label="External link"
+        >
+        <sup>
+            <svg xmlns="http://www.w3.org/2000/svg"
+            class="external-link-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            width="16"
+            height="16"
+            >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M14 3h7m0 0v7m0-7L10 14M5 10v10h10" />
+            </svg>
+        </sup>
+        </a>
+    </h3>
+
+    <!-- DIVIDER -->
+    <div class="section-divider"></div>
+
+    <!-- TEXT -->
+    <div class="research-text">
+        <p>
+        In the XLIII Annual Congress of the Spanish Society of Biomedical Engineering,
+        the tutor of my Master's Thesis presented the daVinci Xi® Instrument Reprocessing System.
+        <a
+            href="https://www.linkedin.com/posts/diego-moreno-blanco-4834a848_realidadvirtual-innovaciaejnsanitaria-seguridaddelpaciente-activity-7414953852950581248-Q6L1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+            aria-label="External link"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg"
+            class="external-link-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            width="16"
+            height="16"
+            >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M14 3h7m0 0v7m0-7L10 14M5 10v10h10" />
+            </svg>
+        </a>
+        </p>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="research-image-container">
+        <div class="home-photo-frame research-photo-frame">
+        <img
+            src="assets/images/ponencia_caseib.jpeg"
+            alt="Presentation at the XLIII Annual Congress of SEIB"
+            class="research-photo"
+        />
+        </div>
+    </div>
+
+    <!-- EVENT TITLE -->
+    <h3 class="research-paper-title">
+        II Congress of the Society of Disinfection and Sterilization
+        <a
+        href="https://www.2025.congreso-sede.org/presentacion/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="external-link"
+        aria-label="External link"
+        >
+        <sup>
+            <svg xmlns="http://www.w3.org/2000/svg"
+            class="external-link-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            width="16"
+            height="16"
+            >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M14 3h7m0 0v7m0-7L10 14M5 10v10h10" />
+            </svg>
+        </sup>
+        </a>
+    </h3>
+
+    <!-- DIVIDER -->
+    <div class="section-divider"></div>
+
+    <!-- TEXT -->
+    <div class="research-text">
+        <p>
+        In the II Congress of the Society of Disinfection and Sterilization, I was in charge of directing a workshop in which we tried the two Virtual Reality environments: the daVinci Xi® Instrument Reprocessing System, and the one involving the full sterilization cycle.
+        <a
+            href="https://www.linkedin.com/posts/inigogomezlozano_una-experiencia-en-el-ii-congreso-de-la-ugcPost-7380902068452155392-kQkI"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+            aria-label="External link"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg"
+            class="external-link-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            width="16"
+            height="16"
+            >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M14 3h7m0 0v7m0-7L10 14M5 10v10h10" />
+            </svg>
+        </a>
+        </p>
+    </div>
+
+    <!-- IMAGE SLIDER -->
+    <div class="research-image-container">
+        <div class="home-photo-frame research-photo-frame">
+            <!-- Contenedor del slider -->
+            <div class="game-items-slider">
+            <button class="slider-arrow left-arrow" (click)="prevImage()">&#10094;</button>
+            <div class="slider-image-container">
+                <img [src]="currentImage" alt="Event Images" class="research-photo">
+            </div>
+            <button class="slider-arrow right-arrow" (click)="nextImage()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
