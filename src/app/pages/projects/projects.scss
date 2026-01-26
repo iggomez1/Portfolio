@@ -1,0 +1,402 @@
+/* ===============================
+   CONTENEDOR PRINCIPAL – DOS COLUMNAS
+================================= */
+.projects-container {
+  display: flex;
+  gap: 3rem;
+  margin-top: 5vh;
+  padding-left: 2rem;
+  /* No fijamos altura aquí, que la izquierda crezca con el contenido */
+  align-items: flex-start;
+}
+
+/* ===============================
+   COLUMNA IZQUIERDA – ÍNDICE
+================================= */
+.projects-index {
+  position: relative; /* ya no sticky */
+  top: auto;
+  flex-shrink: 0;
+  width: 20vw;
+  max-width: 250px;
+  min-width: 160px;
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   COLUMNA DERECHA – SCROLLABLE
+================================= */
+.projects-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 2rem;
+  scroll-behavior: smooth;
+  max-height: 85vh; /* mantiene el scroll interno solo en la derecha */
+}
+
+/* Scrollbar personalizada */
+.projects-content::-webkit-scrollbar {
+  width: 14px;
+}
+
+.projects-content::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+.projects-content::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  border: 2px solid var(--bg-main);
+}
+
+/* Firefox */
+.projects-content {
+  scrollbar-color: var(--bg-secondary) var(--bg-main);
+}
+
+/* ===============================
+   HERO
+================================= */
+.projects-hero h1 {
+  font-size: 3rem;   /* mismo tamaño que home-info h1 */
+  color: var(--text-main);
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.projects-hero h2 {
+  font-size: 1.5rem; /* mismo tamaño que home-info h2 */
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+
+.projects-hero h3 {
+  font-size: 1.2rem;       /* igual que home-tagline */
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: justify;     /* mismo estilo de Home */
+  margin-top: 0.8rem;      /* separación respecto al h2 */
+}
+
+/* ===============================
+   ÍNDICE – LISTAS
+================================= */
+.projects-index ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Enlaces principales y subsecciones */
+.project-link,
+.sub-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.project-link.active,
+.sub-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===============================
+   Subsections con sangría
+================================= */
+.subsections {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.subsections li {
+  margin-bottom: 0.2rem;      /* Separación entre sub-links */
+}
+
+.sub-link {
+  font-size: 0.95rem;          /* Más pequeño que el link principal */
+}
+
+/* ===============================
+   ENLACES DE PROYECTOS Y SUBSECCIONES
+================================= */
+.project-link,
+.sub-link {
+  display: inline-block;      /* para que el subrayado siga el ancho del texto */
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.3rem 0;
+  position: relative;         /* necesario para ::after */
+  transition: color 0.3s ease;
+}
+
+/* SUBRAYADO ANIMADO */
+.project-link::after,
+.sub-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;              /* distancia debajo del texto */
+  height: 2px;               /* grosor de la línea */
+  width: 0%;                 /* empieza en 0 */
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+/* ANIMACIÓN AL HACER HOVER */
+.project-link:hover::after,
+.sub-link:hover::after {
+  width: 100%;
+}
+
+/* CUANDO ESTÁ ACTIVO */
+.project-link.active,
+.sub-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.project-link.active::after,
+.sub-link.active::after {
+  width: 100%;               /* subrayado completo */
+}
+
+/* ===============================
+   SECCIONES DE PROYECTO
+================================= */
+.project-section {
+  margin-bottom: 4rem;
+}
+
+.project-section .home-section {
+  margin-bottom: 2rem;
+}
+
+/* Links externos en proyectos – mantener color de texto */
+.projects-hero .external-link {
+  color: inherit;          /* hereda el color del texto */
+  text-decoration: none;   /* sin subrayado */
+  align-items: center;     /* alinea icono verticalmente con el texto */
+}
+
+.projects-hero .external-link svg.external-link-icon {
+  margin-left: 0.2rem;     /* un pequeño espacio entre texto e icono */
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;     /* el icono usa el mismo color que el texto */
+}
+
+.projects-hero-icons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center; /* centra la fila horizontalmente */
+  gap: 4rem;               /* aumenta la separación entre los iconos */
+  margin-top: 1.5rem;      /* separación respecto al párrafo anterior */
+  margin-bottom: 2rem;     /* margen inferior extra */
+}
+
+.projects-hero-icons .icon-container img {
+  max-height: 80px;       /* logos más grandes */
+  width: auto;             /* mantiene proporción */
+  display: block;
+}
+
+.home-section-text {
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-align: justify;
+  white-space: pre-line;
+  margin-bottom: 1.2rem;
+}
+
+.home-section-text-strong {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.project-divider {
+  width: 100%;  /* todo el ancho menos margen izquierdo */
+  height: 2px;
+  background-color: var(--primary);
+  margin: 0.3rem 0 1rem 0rem; 
+}
+
+/* Separador fino debajo de cada h3 de subsection */
+.home-section-subtitle + .subsection-divider {
+  width: 100%;  /* igual que el divider principal, dejando margen izquierdo */
+  height: 1px;               /* más fino que el del proyecto */
+  background-color: var(--primary);
+  margin: 0.3rem 0 1rem 0;   /* margen superior 0.3rem, inferior 1rem, izquierdo 0 */
+}
+
+/* ===============================
+   LINKS DENTRO DEL HERO (copian estilo del texto)
+================================= */
+/* Links dentro del segundo párrafo del h3 del hero */
+.projects-hero h3 p a,
+.projects-hero h3 p a:visited,
+.projects-hero h3 p a:active {
+  color: var(--text-muted);   /* mismo color que el texto */
+  text-decoration: none;
+  font-weight: inherit;
+
+  display: inline-flex;       /* mantiene el icono al lado del texto */
+  flex-wrap: wrap;            /* permite que el texto baje de línea */
+  align-items: center;        /* icono alineado verticalmente */
+  gap: 0.3rem;                /* espacio entre texto e icono */
+  white-space: normal;        /* permite saltos de línea */
+}
+
+/* Icono hereda color del texto */
+.projects-hero h3 p a svg {
+  stroke: currentColor;
+}
+
+
+/* ===============================
+   Fotos y marcos
+================================= */
+
+/* Recuadro para la imagen del avatar */
+.project-image-box {
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  margin-top: 1rem;          /* separación del párrafo anterior */
+  margin-bottom: 2rem;       /* margen inferior */
+}
+
+.project-image-box img {
+  max-width: 600px;          /* tamaño más pequeño que el original */
+  width: 100%;
+  border: 4px solid var(--bg-secondary); /* marco igual que foto de perfil home */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* sombra igual que home */
+  display: block;
+}
+
+/* Contenedor del slider (marco) */
+.game-items-slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 2rem auto; /* centrado y márgenes superior/inferior */
+  border: 4px solid var(--bg-secondary);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  background-color: var(--bg-main);
+  width: max-content;      /* ¡importantísimo! el marco se ajusta al contenido */
+  height: max-content;     /* ajusta altura al contenido */
+  padding: 0;              /* elimina cualquier padding interno */
+}
+
+/* Contenedor de la imagen */
+.slider-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;   /* se ajusta al tamaño de la imagen */
+  height: auto;
+  padding: 0;    /* elimina espacios internos */
+}
+
+.slider-image-container img {
+  max-width: 100%;
+  max-height: 300px; /* altura máxima */
+  object-fit: contain;
+}
+
+/* Flechas de navegación */
+.slider-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-main);
+  padding: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.slider-arrow:hover {
+  color: var(--primary);
+}
+
+/* Flechas izquierda y derecha posicionadas */
+.left-arrow {
+  position: absolute;
+  left: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 10px;
+}
+
+.video-frame {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 3rem 0;
+}
+
+.video-frame video {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.image-preview-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.image-preview {
+  max-height: 300px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Lightbox */
+.image-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+

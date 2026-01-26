@@ -1,1 +1,349 @@
-<p>projects works!</p>
+<div class="projects-container">
+  
+  <!-- ================================
+      COLUMNA IZQUIERDA – ÍNDICE FIJO
+  ================================= -->
+  <nav class="projects-index">
+    <ul>
+      <!-- PROYECTO 1: Da Vinci -->
+      <li class="project-item">
+        <a href="#" (click)="scrollTo('proj1'); $event.preventDefault()"
+          class="project-link" [class.active]="isActive('proj1')">
+          daVinci Xi® Instrument Reprocessing System (DVX - IRS)
+        </a>
+        <ul class="subsections">
+          <li>
+            <a href="#" (click)="scrollTo('sub1'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub1')">
+              Robotic instrument - Large Needle Driver (8mm)
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="scrollTo('sub2'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub2')">
+              Gameplay
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="scrollTo('sub3'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub3')">
+              Metrics Menu
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="scrollTo('sub4'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub4')">
+              Server-side Application
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="scrollTo('sub5'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub5')">
+              Validation of the Project
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- PROYECTO 2: Full Sterilisation Cycle Simulator -->
+      <li class="project-item">
+        <a href="#" (click)="scrollTo('proj2'); $event.preventDefault()"
+          class="project-link" [class.active]="isActive('proj2')">
+          Full Sterilisation Cycle Simulator
+        </a>
+        <ul class="subsections">
+          <li>
+            <a href="#" (click)="scrollTo('sub6'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub6')">
+              Gameplay
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- PROYECTO 3: Mischievous Die -->
+      <li class="project-item">
+        <a href="#" (click)="scrollTo('proj3'); $event.preventDefault()"
+          class="project-link" [class.active]="isActive('proj3')">
+          Mischievous Die
+        </a>
+        <ul class="subsections">
+          <li>
+            <a href="#" (click)="scrollTo('sub7'); $event.preventDefault()"
+              class="sub-link" [class.active]="isActive('sub7')">
+              Gameplay
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ================================
+       COLUMNA DERECHA – CONTENIDO SCROLLABLE
+    ================================= -->
+  <div class="projects-content" #scrollContainer>
+
+    <!-- ================================
+        HERO DE PROYECTOS
+    ================================= -->
+    <div class="projects-hero">
+      <h1>Projects</h1>
+      <h2>Summary of projects developped throughout my education and personal initiatives.</h2>
+      <h3>
+        Note: The following projects have been developed thanks to the collaboration between the 
+        <a href="https://www.upm.es/recursosidi/en/map/en_bioengineering-and-telemedicine-group/" target="_blank" rel="noopener noreferrer" class="external-link">
+            Biomedical Engineering and Telemedicine Centre (GBT) – ETSIT-UPM
+            <svg xmlns="http://www.w3.org/2000/svg" class="external-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7m0 0v7m0-7L10 14M5 10v10h10" />
+            </svg>
+        </a> 
+        and the 
+        <a href="https://www.irycis.org/es/" target="_blank" rel="noopener noreferrer" class="external-link">
+            Medical Research Institute (IRYCIS) – Ramón y Cajal University Hospital
+            <svg xmlns="http://www.w3.org/2000/svg" class="external-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7m0 0v7m0-7L10 14M5 10v10h10" />
+            </svg>
+        </a>
+      </h3>
+
+      <!-- ICONOS DE LOS DEPARTAMENTOS -->
+      <div class="projects-hero-icons">
+        <div class="icon-container">
+          <img src="assets/icons/gbt_logo.png" alt="ETSIT Logo">
+        </div>
+        <div class="icon-container">
+          <img src="assets/icons/irycis_logo.png" alt="IRYCIS Logo">
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================
+        PROYECTO 1 : DaVinci
+    ================================= -->
+    <section id="proj1" class="project-section">
+      <h2 class="home-section-title">daVinci Xi® Instrument Reprocessing System (DVX - IRS) - Master's Thesis (10/10)</h2>
+      <div class="project-divider"></div>
+
+      <p class="home-section-text">
+        This virtual environment is the most comprehensive among all the projects listed here. It has been developed to simulate the complete reprocessing of a DaVinci Xi® surgical system robotic instrument and includes the cleaning, drying, and lubrication processes, with visual and auditory feedback to enable safe, autonomous learning. Additionally, it is linked to a web application that allows instructors and users to access both individual and general performance metrics, supporting personalized monitoring and objective evaluation of progress. Together, these tools offer an innovative solution that enhances hospital safety and efficiency while integrating emerging technologies into healthcare personnel training.
+      </p>
+
+    <!--Robotic instrument -->
+      <section id="sub1" class="home-section">
+        <h3 class="home-section-subtitle">Robotic instrument - Large Needle Driver (8mm)</h3>
+        <div class="subsection-divider"></div>
+
+        <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify;">
+            The robotic instrument to be reprocessed in this project would be a Large Needle Driver (8mm). You can visualize the instrument's detail as shown in the intructions manual, as well as the modelling of the instrument in Blender. The other items, necessary for its reprocessing, can be seen in the Gameplay section.  
+        </p>
+
+        <!-- Contenedor del slider -->
+        <div class="game-items-slider">
+            <!-- Flecha izquierda -->
+            <button class="slider-arrow left-arrow" (click)="prevImage()">&#10094;</button>
+
+            <!-- Imagen mostrada -->
+            <div class="slider-image-container">
+                <img [src]="currentImage" alt="Game Item">
+            </div>
+
+            <!-- Flecha derecha -->
+            <button class="slider-arrow right-arrow" (click)="nextImage()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Gameplay -->
+    <section id="sub2" class="home-section">
+      <h3 class="home-section-subtitle">Gameplay</h3>
+      <div class="subsection-divider"></div>
+
+      <p class="home-section-text">  
+        The following video shows a full reprocessing attempt within the virtual environment.
+      </p>
+
+      <div class="video-frame">
+        <video controls>
+          <source src="assets/videos/video_gameplay.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p class="home-section-text">  
+        Additionally, the project includes a tutorials section in order to encourage autonomous learning and to familiarize users with Virtual Reality technologies.
+      </p>
+
+      <div class="video-frame">
+        <video controls>
+          <source src="assets/videos/video_tutoriales.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Metrics Menu -->
+    <section id="sub3" class="home-section">
+      <h3 class="home-section-subtitle">Metrics Menu</h3>
+      <div class="subsection-divider"></div>
+
+      <p class="home-section-text">  
+        Users can access a menu about their performance metrics within the VR application, as long as they are connected to the hospital's server. Click on the image to see the full menu.
+      </p>
+
+      <div class="image-preview-container">
+        <img
+          src="assets/images/DaVinci/metrics_menu_thumb.png"
+          alt="Metrics menu preview"
+          class="image-preview"
+          (click)="openImage('assets/images/DaVinci/metrics_menu_full.png')"
+        />
+      </div>
+
+      <!-- Lightbox -->
+      <div class="image-lightbox" *ngIf="selectedImage" (click)="closeImage()">
+        <img [src]="selectedImage" alt="Expanded view" />
+      </div>
+
+    </section>
+
+    <!-- Server-side application -->
+    <section id="sub4" class="home-section">
+      <h3 class="home-section-subtitle">Server-side Application</h3>
+      <div class="subsection-divider"></div>
+
+      <p class="home-section-text">  
+        Both users and isntructors can use their credentials to access a web application hosted in the servers of the hospital. <br><br>
+        Users will be able to check their own performance metrics, which feature their last ten attemps, with six different graphs about their performance in these attempts; as well as a summary of their best attempts of all time.
+      </p>
+
+      <!-- Contenedor del slider -->
+      <div class="game-items-slider">
+        <!-- Flecha izquierda -->
+        <button
+          class="slider-arrow left-arrow"
+          (click)="prevServerImage()"
+        >
+          &#10094;
+        </button>
+
+        <!-- Imagen mostrada -->
+        <div class="slider-image-container">
+          <img [src]="currentServerImage" alt="Server application screenshot">
+        </div>
+
+        <!-- Flecha derecha -->
+        <button
+          class="slider-arrow right-arrow"
+          (click)="nextServerImage()"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <p class="home-section-text">  
+        Instructors will be able to view the performance metrics of each user, featuring the same information as in each of their user pages. Additionally, they will be able to access a series os statistics about the general performance of all users. 
+      </p>
+
+      <!-- Contenedor del slider ADMIN -->
+      <div class="game-items-slider">
+        <!-- Flecha izquierda -->
+        <button
+          class="slider-arrow left-arrow"
+          (click)="prevAdminImage()"
+        >
+          &#10094;
+        </button>
+
+        <!-- Imagen mostrada -->
+        <div class="slider-image-container">
+          <img
+            [src]="currentAdminImage"
+            alt="Admin application screenshot"
+          >
+        </div>
+
+        <!-- Flecha derecha -->
+        <button
+          class="slider-arrow right-arrow"
+          (click)="nextAdminImage()"
+        >
+          &#10095;
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Validation of the Project -->
+    <section id="sub5" class="home-section">
+      <h3 class="home-section-subtitle">Validation of the Project</h3>
+      <div class="subsection-divider"></div>
+
+      <p class="home-section-text">  
+        Finally, a validation process was conducted, in which 50 users were given the system to try it, to later evaluate it. Among the different results obtained, the most important one would be the fact that the system scored an average System of Usability Score of 77.81, with a standard deviation of 14.87. This places the system’s usability well above the standard benchmark of 68.
+      </p>
+
+      <!-- Foto centrada con marco -->
+      <div class="project-image-box">
+        <img src="assets/images/DaVinci/validation_result.png" 
+            alt="Validation results screenshot">
+      </div>
+    </section>
+
+
+    </section>
+
+    <!-- ================================
+        PROYECTO 2 : Prácticas
+    ================================= -->
+    <section id="proj2" class="project-section">
+      <h2 class="home-section-title">Full Steriliation Cycle - Master's Intership (10/10)</h2>
+      <div class="project-divider"></div>
+
+      <p class="home-section-text">
+        This project was developed during my internship at Ramón y Cajal University Hospital. Thanks to this, it was carried out in close collaboration with the clinical professionals of the Preventive Medicine Department. It covers the entire sterilization process that reusable clinical materials must undergo before they can be used again. Users will learn how to properly handle this material, as well as how to use the tracking system, which is essential.
+      </p>
+
+      <section id="sub6" class="home-section">
+        <h3 class="home-section-subtitle">Gameplay</h3>
+        <div class="subsection-divider"></div>
+
+        <div class="video-frame">
+          <video controls>
+            <source src="assets/videos/video_practicas.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- ================================
+        PROYECTO 3 : Dado travieso
+    ================================= -->
+    <section id="proj3" class="project-section">
+      <h2 class="home-section-title">Mischievous Die - Project Born of a Personal Initiative</h2>
+      <div class="project-divider"></div>
+
+
+      <p class="home-section-text">
+        This last project was born of a personal initiative. It is one of the trials of the astronaut selection process of the European Space Agency, and consists on mentally rotating a die. The spanish astronaut Sara García-Alonso describes it in her book "Órbitas", and I thought it would be a fun idea to implement in unity. I've also included a couple of skins to play with different materials.
+      </p>
+
+      <section id="sub7" class="home-section">
+        <h3 class="home-section-subtitle">Gameplay</h3>
+        <div class="subsection-divider"></div>
+
+        <div class="video-frame">
+          <video controls>
+            <source src="assets/videos/video_dado.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      </section>
+
+    </section>
+
+  </div>
+</div>
