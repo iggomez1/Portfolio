@@ -1,5 +1,5 @@
 <div class="projects-container">
-  
+
   <!-- ================================
       COLUMNA IZQUIERDA – ÍNDICE FIJO
   ================================= -->
@@ -129,167 +129,132 @@
         This virtual environment is the most comprehensive among all the projects listed here. It has been developed to simulate the complete reprocessing of a DaVinci Xi® surgical system robotic instrument and includes the cleaning, drying, and lubrication processes, with visual and auditory feedback to enable safe, autonomous learning. Additionally, it is linked to a web application that allows instructors and users to access both individual and general performance metrics, supporting personalized monitoring and objective evaluation of progress. Together, these tools offer an innovative solution that enhances hospital safety and efficiency while integrating emerging technologies into healthcare personnel training.
       </p>
 
-    <!--Robotic instrument -->
+      <!--Robotic instrument -->
       <section id="sub1" class="home-section">
         <h3 class="home-section-subtitle">Robotic instrument - Large Needle Driver (8mm)</h3>
         <div class="subsection-divider"></div>
 
         <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify;">
-            The robotic instrument to be reprocessed in this project would be a Large Needle Driver (8mm). You can visualize the instrument's detail as shown in the intructions manual, as well as the modelling of the instrument in Blender. The other items, necessary for its reprocessing, can be seen in the Gameplay section.  
+          The robotic instrument to be reprocessed in this project would be a Large Needle Driver (8mm). You can visualize the instrument's detail as shown in the intructions manual, as well as the modelling of the instrument in Blender. The other items, necessary for its reprocessing, can be seen in the Gameplay section.  
         </p>
 
         <!-- Contenedor del slider -->
         <div class="game-items-slider">
-            <!-- Flecha izquierda -->
             <button class="slider-arrow left-arrow" (click)="prevImage()">&#10094;</button>
-
-            <!-- Imagen mostrada -->
             <div class="slider-image-container">
                 <img [src]="currentImage" alt="Game Item">
             </div>
-
-            <!-- Flecha derecha -->
             <button class="slider-arrow right-arrow" (click)="nextImage()">&#10095;</button>
         </div>
-    </section>
+      </section>
 
-    <!-- Gameplay -->
-    <section id="sub2" class="home-section">
-      <h3 class="home-section-subtitle">Gameplay</h3>
-      <div class="subsection-divider"></div>
+      <!-- Gameplay -->
+      <section id="sub2" class="home-section">
+        <h3 class="home-section-subtitle">Gameplay</h3>
+        <div class="subsection-divider"></div>
 
-      <p class="home-section-text">  
-        The following video shows a full reprocessing attempt within the virtual environment.
-      </p>
+        <p class="home-section-text">  
+          The following video shows a full reprocessing attempt within the virtual environment.
+        </p>
 
-      <div class="video-frame">
-        <video controls>
-          <source src="assets/videos/video_gameplay.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <p class="home-section-text">  
-        Additionally, the project includes a tutorials section in order to encourage autonomous learning and to familiarize users with Virtual Reality technologies.
-      </p>
-
-      <div class="video-frame">
-        <video controls>
-          <source src="assets/videos/video_tutoriales.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
-
-    <!-- Metrics Menu -->
-    <section id="sub3" class="home-section">
-      <h3 class="home-section-subtitle">Metrics Menu</h3>
-      <div class="subsection-divider"></div>
-
-      <p class="home-section-text">  
-        Users can access a menu about their performance metrics within the VR application, as long as they are connected to the hospital's server. Click on the image to see the full menu.
-      </p>
-
-      <div class="image-preview-container">
-        <img
-          src="assets/images/DaVinci/metrics_menu_thumb.png"
-          alt="Metrics menu preview"
-          class="image-preview"
-          (click)="openImage('assets/images/DaVinci/metrics_menu_full.png')"
-        />
-      </div>
-
-      <!-- Lightbox -->
-      <div class="image-lightbox" *ngIf="selectedImage" (click)="closeImage()">
-        <img [src]="selectedImage" alt="Expanded view" />
-      </div>
-
-    </section>
-
-    <!-- Server-side application -->
-    <section id="sub4" class="home-section">
-      <h3 class="home-section-subtitle">Server-side Application</h3>
-      <div class="subsection-divider"></div>
-
-      <p class="home-section-text">  
-        Both users and isntructors can use their credentials to access a web application hosted in the servers of the hospital. <br><br>
-        Users will be able to check their own performance metrics, which feature their last ten attemps, with six different graphs about their performance in these attempts; as well as a summary of their best attempts of all time.
-      </p>
-
-      <!-- Contenedor del slider -->
-      <div class="game-items-slider">
-        <!-- Flecha izquierda -->
-        <button
-          class="slider-arrow left-arrow"
-          (click)="prevServerImage()"
-        >
-          &#10094;
-        </button>
-
-        <!-- Imagen mostrada -->
-        <div class="slider-image-container">
-          <img [src]="currentServerImage" alt="Server application screenshot">
+        <div class="video-frame">
+          <!-- Reemplaza VIDEO_ID_1 por tu ID de YouTube -->
+          <iframe width="100%" height="400"
+                  src="https://www.youtube.com/embed/NlrWm9KiqbM"
+                  title="Gameplay DVX"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+          </iframe>
         </div>
 
-        <!-- Flecha derecha -->
-        <button
-          class="slider-arrow right-arrow"
-          (click)="nextServerImage()"
-        >
-          &#10095;
-        </button>
-      </div>
+        <p class="home-section-text">  
+          Additionally, the project includes a tutorials section in order to encourage autonomous learning and to familiarize users with Virtual Reality technologies.
+        </p>
 
-      <p class="home-section-text">  
-        Instructors will be able to view the performance metrics of each user, featuring the same information as in each of their user pages. Additionally, they will be able to access a series os statistics about the general performance of all users. 
-      </p>
+        <div class="video-frame">
+          <!-- Reemplaza VIDEO_ID_2 por tu ID de YouTube -->
+          <iframe width="100%" height="400"
+                  src="https://www.youtube.com/embed/FkD7fLOwC9o"
+                  title="Tutoriales DVX"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </section>
 
-      <!-- Contenedor del slider ADMIN -->
-      <div class="game-items-slider">
-        <!-- Flecha izquierda -->
-        <button
-          class="slider-arrow left-arrow"
-          (click)="prevAdminImage()"
-        >
-          &#10094;
-        </button>
+      <!-- Metrics Menu -->
+      <section id="sub3" class="home-section">
+        <h3 class="home-section-subtitle">Metrics Menu</h3>
+        <div class="subsection-divider"></div>
 
-        <!-- Imagen mostrada -->
-        <div class="slider-image-container">
+        <p class="home-section-text">  
+          Users can access a menu about their performance metrics within the VR application, as long as they are connected to the hospital's server. Click on the image to see the full menu.
+        </p>
+
+        <div class="image-preview-container">
           <img
-            [src]="currentAdminImage"
-            alt="Admin application screenshot"
-          >
+            src="assets/images/DaVinci/metrics_menu_thumb.png"
+            alt="Metrics menu preview"
+            class="image-preview"
+            (click)="openImage('assets/images/DaVinci/metrics_menu_full.png')"
+          />
         </div>
 
-        <!-- Flecha derecha -->
-        <button
-          class="slider-arrow right-arrow"
-          (click)="nextAdminImage()"
-        >
-          &#10095;
-        </button>
-      </div>
+        <div class="image-lightbox" *ngIf="selectedImage" (click)="closeImage()">
+          <img [src]="selectedImage" alt="Expanded view" />
+        </div>
 
-    </section>
+      </section>
 
-    <!-- Validation of the Project -->
-    <section id="sub5" class="home-section">
-      <h3 class="home-section-subtitle">Validation of the Project</h3>
-      <div class="subsection-divider"></div>
+      <!-- Server-side application -->
+      <section id="sub4" class="home-section">
+        <h3 class="home-section-subtitle">Server-side Application</h3>
+        <div class="subsection-divider"></div>
 
-      <p class="home-section-text">  
-        Finally, a validation process was conducted, in which 50 users were given the system to try it, to later evaluate it. Among the different results obtained, the most important one would be the fact that the system scored an average System of Usability Score of 77.81, with a standard deviation of 14.87. This places the system’s usability well above the standard benchmark of 68.
-      </p>
+        <p class="home-section-text">  
+          Both users and isntructors can use their credentials to access a web application hosted in the servers of the hospital. <br><br>
+          Users will be able to check their own performance metrics, which feature their last ten attemps, with six different graphs about their performance in these attempts; as well as a summary of their best attempts of all time.
+        </p>
 
-      <!-- Foto centrada con marco -->
-      <div class="project-image-box">
-        <img src="assets/images/DaVinci/validation_result.png" 
-            alt="Validation results screenshot">
-      </div>
-    </section>
+        <!-- Contenedor del slider -->
+        <div class="game-items-slider">
+            <button class="slider-arrow left-arrow" (click)="prevServerImage()">&#10094;</button>
+            <div class="slider-image-container">
+                <img [src]="currentServerImage" alt="Server application screenshot">
+            </div>
+            <button class="slider-arrow right-arrow" (click)="nextServerImage()">&#10095;</button>
+        </div>
 
+        <p class="home-section-text">  
+          Instructors will be able to view the performance metrics of each user, featuring the same information as in each of their user pages. Additionally, they will be able to access a series os statistics about the general performance of all users. 
+        </p>
 
+        <!-- Contenedor del slider ADMIN -->
+        <div class="game-items-slider">
+            <button class="slider-arrow left-arrow" (click)="prevAdminImage()">&#10094;</button>
+            <div class="slider-image-container">
+                <img [src]="currentAdminImage" alt="Admin application screenshot">
+            </div>
+            <button class="slider-arrow right-arrow" (click)="nextAdminImage()">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- Validation of the Project -->
+      <section id="sub5" class="home-section">
+        <h3 class="home-section-subtitle">Validation of the Project</h3>
+        <div class="subsection-divider"></div>
+
+        <p class="home-section-text">  
+          Finally, a validation process was conducted, in which 50 users were given the system to try it, to later evaluate it. Among the different results obtained, the most important one would be the fact that the system scored an average System of Usability Score of 77.81, with a standard deviation of 14.87. This places the system’s usability well above the standard benchmark of 68.
+        </p>
+
+        <div class="project-image-box">
+          <img src="assets/images/DaVinci/validation_result.png" 
+              alt="Validation results screenshot">
+        </div>
+      </section>
     </section>
 
     <!-- ================================
@@ -308,14 +273,16 @@
         <div class="subsection-divider"></div>
 
         <div class="video-frame">
-          <video controls>
-            <source src="assets/videos/video_practicas.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <!-- Reemplaza VIDEO_ID_3 por tu ID de YouTube -->
+          <iframe width="100%" height="400"
+                  src="https://www.youtube.com/embed/RJ9GoMPve6w"
+                  title="Gameplay Practicas"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+          </iframe>
         </div>
-
       </section>
-
     </section>
 
     <!-- ================================
@@ -325,7 +292,6 @@
       <h2 class="home-section-title">Mischievous Die - Project Born of a Personal Initiative</h2>
       <div class="project-divider"></div>
 
-
       <p class="home-section-text">
         This last project was born of a personal initiative. It is one of the trials of the astronaut selection process of the European Space Agency, and consists on mentally rotating a die. The spanish astronaut Sara García-Alonso describes it in her book "Órbitas", and I thought it would be a fun idea to implement in unity. I've also included a couple of skins to play with different materials.
       </p>
@@ -334,15 +300,17 @@
         <h3 class="home-section-subtitle">Gameplay</h3>
         <div class="subsection-divider"></div>
 
-        <div class="video-frame">
-          <video controls>
-            <source src="assets/videos/video_dado.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div class="video-frame-large">
+          <!-- Reemplaza VIDEO_ID_4 por tu ID de YouTube -->
+          <iframe width="100%" height="400"
+                  src="https://www.youtube.com/embed/yd8Y8uHVlwg"
+                  title="Gameplay Dado travieso"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+          </iframe>
         </div>
-
       </section>
-
     </section>
 
   </div>
